@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Birthday Surprise</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:linear-gradient(135deg,#0f172a,#2563eb);color:#fff;overflow:hidden}
+.page{display:none;height:100vh;padding:20px;justify-content:center;align-items:center;text-align:center;overflow:auto}
+.active{display:flex;flex-direction:column}
+.glass{background:rgba(255,255,255,.12);backdrop-filter:blur(10px);padding:20px;border-radius:20px;width:min(95%,900px)}
+.hero{width:220px;height:220px;border-radius:50%;object-fit:cover}
+.btn{padding:12px 24px;border:none;border-radius:30px;margin-top:15px;cursor:pointer}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.gallery img{width:100%;height:150px;object-fit:cover;border-radius:12px}
+.gift{font-size:60px;cursor:pointer;margin:10px}
+.hidden{display:none}
+.rose{position:fixed;top:-30px;pointer-events:none}
+@media(max-width:600px){h1{font-size:2rem}.hero{width:170px;height:170px}}
+</style>
+</head>
+<body>
+
+<section id="p1" class="page active"><div class="glass">
+<h1>🎂 Happy Birthday</h1>
+<img src="YOUR_MAIN_PHOTO.png" class="hero">
+<h2>PUTTUUU ❤️</h2>
+<button class="btn" onclick="showPage(2)">Next ➜</button>
+</div></section>
+
+<section id="p2" class="page"><div class="glass">
+<h2>💌 Special Message</h2>
+<p> On your special day, I just want to say thankyou for being such a amazing friend.Today is a special day
+ because it celebrates an incredibly special person. You are not just a wonderful friend, but also one of the
+ strongest and kindest people I know. No matter what challenges come your way, you face them with 
+courage and keep moving forward with a smile.
+
+What makes you truly unique is your caring nature. You are always ready to help others, support them,
+ and make them feel better without expecting anything in return. Your kindness, positivity, and genuine
+ heart make a difference in the lives of so many people.
+
+I feel lucky to have a friend like you. Thank you for all the laughter, memories, support, and happiness you bring.
+ Life becomes a little brighter when you are around.
+
+On your birthday, I wish you endless happiness, good health, success in everything you do, and countless
+ beautiful moments to cherish. May all your dreams come true and may this year be your best one yet.
+
+Never change the beautiful person you are. Keep smiling, keep shining, and keep being the amazing
+ friend that everyone is grateful to have.
+
+Happy Birthday once again! 🌹✨🎂</p>
+<div class="gift" onclick="toggle('msg1')">🎁</div>
+<div id="msg1" class="hidden">💖 You are amazing and truly special!</div>
+<button class="btn" onclick="showPage(3)">Next ➜</button>
+</div></section>
+
+<section id="p3" class="page"><div class="glass">
+<h2>🌹 Growing Beautifully 🌹</h2>
+<div class="gallery">
+<img src="photo1.jpg"><img src="photo2.jpg"><img src="photo3.jpg">
+<img src="photo4.jpg"><img src="photo5.jpg"><img src="photo6.jpg">
+<img src="photo7.jpg"><img src="photo5.jpg"><img src="photo9.jpg">
+</div>
+<button class="btn" onclick="showPage(4)">Next ➜</button>
+</div></section>
+
+<section id="p4" class="page"><div class="glass">
+<h2>📖 School & Coaching Memories ❤️</h2>
+<div class="gift" onclick="toggle('s1')">🎁</div><div id="s1" class="hidden">🏫It's hard to believe that we have studying together for almost 5 -6 years.
+Looking back, there are so many memories that still make me smile.
+
+I still remember those school van rides where we used to talk, laugh, and enjoy every little moments.
+Being in the same class for years give us the countless memories that I will always cherish.
+And of course, how can I forget that legendary day when we accidentally broke a tube light in school. Now 
+It's one of the funniest memories to look back on.
+Then came class 11, when we joined the same coaching. Weather it was studing seriously or finding ways to enjoy the class those days 
+were truly memorable.
+
+From school van rides to class rooms, from coaching sessions to unforgettable funny moments, these years have given us memories that 
+will always remain special. No matter where life takes us in the future, those moments will always have 
+a special place in my heart.
+Thankyou for being such an amazing part of these wounderful years.  </div>
+<button class="btn" onclick="showPage(5)">Next ➜</button>
+</div></section>
+
+<section id="p5" class="page"><div class="glass">
+<h2>🏆 Awards Reserved Only For You</h2>
+<div class="gift" onclick="toggle('a1')">🎁</div><div id="a1" class="hidden">🏆 Best Helper Award</div>
+<div class="gift" onclick="toggle('a2')">🎁</div><div id="a2" class="hidden">🏆 Kindest Heart Award</div>
+<div class="gift" onclick="toggle('a3')">🎁</div><div id="a3" class="hidden">🏆 Strongest Person Award</div>
+<div class="gift" onclick="toggle('a4')">🎁</div><div id="a4" class="hidden">🏆 Brightest Smile Award</div>
+<div class="gift" onclick="toggle('a5')">🎁</div><div id="a5" class="hidden">🏆 Amazing Friend Award</div>
+<button class="btn" onclick="showPage(6)">Next ➜</button>
+</div></section>
+
+<section id="p6" class="page">
+
+<div class="glass">
+
+<h2>💙 Open When... 💌</h2>
+
+<!-- Gift 1 -->
+
+<div class="gift" onclick="toggle('o1')">
+🎁 Open When You're Sad
+</div>
+
+<div id="o1" class="hidden">
+
+<h3>💙 Open When You're Sad</h3>
+
+<p>
+Whenever you feel sad, remember that difficult times
+don't last forever. You are much stronger than you think.
+Your smile has brightened so many lives and there are
+always people who care about you.
+</p>
+
+</div>
+
+<!-- Gift 2 -->
+
+<div class="gift" onclick="toggle('o2')">
+🎁 Open When You Need Motivation
+</div>
+
+<div id="o2" class="hidden">
+
+<h3>🚀 Open When You Need Motivation</h3>
+
+<p>
+Look at how far you've already come. Every challenge
+you've faced has made you stronger. Keep believing in
+yourself because your future is bright and full of
+opportunities.
+</p>
+
+</div>
+
+<!-- Gift 3 -->
+
+<div class="gift" onclick="toggle('o3')">
+🎁 Open When You Doubt Yourself
+</div>
+
+<div id="o3" class="hidden">
+
+<h3>✨ Open When You Doubt Yourself</h3>
+
+<p>
+Never underestimate yourself. You are capable of doing
+amazing things. The strength, kindness and determination
+you have are enough to overcome any obstacle.
+</p>
+
+</div>
+
+<!-- Gift 4 -->
+
+<div class="gift" onclick="toggle('o4')">
+🎁 Open When You Need A Friend
+</div>
+
+<div id="o4" class="hidden">
+
+<h3>🤝 Open When You Need A Friend</h3>
+
+<p>
+No matter what happens in life, you'll never be alone.
+There will always be people who care about you,
+support you and want to see you happy.
+</p>
+
+</div>
+
+<!-- Gift 5 -->
+
+<div class="gift" onclick="toggle('o5')">
+🎁 Open When You Want To Smile
+</div>
+
+<div id="o5" class="hidden">
+
+<h3>😊 Open When You Want To Smile</h3>
+
+<p>
+Think about all the beautiful memories,
+all the laughter, all the achievements and all the
+people whose lives became better because you were
+a part of them.
+</p>
+
+</div>
+
+<h2 style="margin-top:20px;">
+🎂 Happy Birthday Again ❤️
+</h2>
+
+</div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+function fireCrackers() {
+    confetti({
+        particleCount: 120,
+        spread: 100,
+        origin: { y: 0.6 }
+    });
+
+    confetti({
+        particleCount: 60,
+        angle: 60,
+        spread: 70,
+        origin: { x: 0 }
+    });
+
+    confetti({
+        particleCount: 60,
+        angle: 120,
+        spread: 70,
+        origin: { x: 1 }
+    });
+}
+
+function showPage(n){
+    document.querySelectorAll('.page').forEach(function(p){
+        p.classList.remove('active');
+    });
+
+    document.getElementById('p' + n).classList.add('active');
+
+    fireCrackers();
+}
+
+function toggle(id){
+    document.getElementById(id).classList.toggle('hidden');
+}
+
+function rose(){
+    let r = document.createElement('div');
+    r.className = 'rose';
+    r.innerHTML = '🌹';
+    r.style.left = Math.random()*100 + 'vw';
+
+    document.body.appendChild(r);
+
+    let y = 0;
+
+    let t = setInterval(function(){
+        y += 4;
+        r.style.top = y + 'px';
+
+        if(y > window.innerHeight){
+            clearInterval(t);
+            r.remove();
+        }
+    },20);
+}
+
+setInterval(rose,300);
+
+window.onload = function(){
+    fireCrackers();
+};
+
+setInterval(fireCrackers,4000);
+</script>
+
+</body>
+</html>
+
